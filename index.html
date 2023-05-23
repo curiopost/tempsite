@@ -1,2 +1,12 @@
 <h1>Curiopost Has been Shutdown</h1>
 <p>On 5/23/2023 Curiopost has stopped its services and will stop functioning. Our services code will be made open source and will be available at <a href="https://github.com/curiopost">GitHub</a>
+  <script>
+  if(window.navigator && navigator.serviceWorker) {
+  navigator.serviceWorker.getRegistrations()
+  .then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+  </script>
